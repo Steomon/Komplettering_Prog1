@@ -2,3 +2,8 @@ Skapa ett enkelt program som använder TryParse eller Try
 Inkludera pseudokod och kommentarer
 
 
+
+
+1. Skapa en slumpgenerator
+2. Använd slumpgeneratorn för att skapa en int med ett värde mellan 1-20
+3. Skriv ut instruktioner (gissa tal mellan 1-20) 
