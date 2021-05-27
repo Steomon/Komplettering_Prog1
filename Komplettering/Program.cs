@@ -10,7 +10,7 @@ namespace Komplettering
             Random generator = new Random();
 
             //use the random number generator to assign a value between 1-20 to the int "correctAnswer"
-            int correctAnswer = generator.Next(1,21);
+            int correctAnswer = generator.Next(1, 21);
 
             //print instructions in the console
             Console.WriteLine("Guess a number between 1-20");
@@ -21,7 +21,7 @@ namespace Komplettering
             {
                 //take input from the user and store it in the string "inputAnswer"
                 string inputAnswer = Console.ReadLine();
-                
+
                 //try to convert the input string into an int. if it can be converted, set the boolean parseSucceed to true,
                 //and store the converted value of "inputAnswer" in an int called "inputAnswerInt" 
                 bool parseSucceed = int.TryParse(inputAnswer, out int inputAnswerInt);
@@ -37,13 +37,13 @@ namespace Komplettering
                         {
                             Console.WriteLine("Congratulations, you found the number!");
                             numberFound = true;
-                        } 
-                        //otherwise, tell the player if the correct answer is bigger or smaller than the number
-                        else if(inputAnswerInt < correctAnswer)
-                        {
-                            Console.WriteLine("Try something bigger");
                         }
-                        else if(inputAnswerInt > correctAnswer)
+                        //otherwise, tell the player if the correct answer is larger or smaller than the number
+                        else if (inputAnswerInt < correctAnswer)
+                        {
+                            Console.WriteLine("Try something larger");
+                        }
+                        else if (inputAnswerInt > correctAnswer)
                         {
                             Console.WriteLine("Try something smaller");
                         }
@@ -58,7 +58,7 @@ namespace Komplettering
                 else
                 {
                     Console.WriteLine("That is text, not a number. Try again!");
-                }  
+                }
             }
             //Stop the program from closing instantly when done
             Console.ReadLine();
